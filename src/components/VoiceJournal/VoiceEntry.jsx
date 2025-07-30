@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/VoiceEntry.css';
+import '../../styles/voiceEntry.css';
 
 const VoiceEntry = ({ entry }) => {
   const {
