@@ -1,0 +1,59 @@
+/* 🌕 Unified Button Harmony System for Sorya-Mobile */
+
+/* Primary Action Button */
+.primary-button {
+  background-color: var(--accent-color);
+  color: #fefbf3;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.primary-button:hover {
+  background-color: var(--accent-color-hover);
+  color: #fffde0;
+}
+
+.primary-button:active {
+  transform: scale(0.98);
+}
+
+/* Secondary Action Button */
+.secondary-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--accent-color);
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Tag / Context Pill Button */
+.tag-button {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background-color: #f3edff;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag-button.selected {
+  background-color: var(--accent-color);
+  color: white;
+}

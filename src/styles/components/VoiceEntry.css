@@ -1,0 +1,50 @@
+.voice-entry {
+  background-color: #fdfcf9;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.entry-transcript {
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tone-tag {
+  background-color: #e0f0ff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #005e9b;
+}
+
+.breath-state {
+  background-color: #f0fdf4;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-style: italic;
+  color: #2c6e49;
+}
+
+.context-mode {
+  background-color: #fff5e6;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  color: #a66b00;
+}
+
+.entry-date {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-left: auto;
+}

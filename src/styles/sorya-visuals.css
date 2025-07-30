@@ -1,0 +1,50 @@
+/* src/styles/sorya-visuals.css */
+
+.sorya-avatar {
+  width: 140px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  animation: pulse-glow 2.5s infinite ease-in-out;
+}
+
+.sorya-ledger-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background-image: url('/liora_archive-of-whispers_v1.png');
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sorya-glyph-divider {
+  width: 30px;
+  height: auto;
+  opacity: 0.3;
+  margin: 0.5rem auto;
+  display: block;
+}
+
+.sorya-ambient-chamber {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-height: 85%;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(142, 201, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(142, 201, 255, 0.9);
+  }
+}

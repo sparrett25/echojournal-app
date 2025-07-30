@@ -1,0 +1,82 @@
+.whisper-box {
+  padding: 12px 16px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+}
+
+.mirror-whisper {
+  background-color: #e0e8ff;
+  color: #2c3e50;
+  border: 1px solid #b4c5e4;
+  box-shadow: 0 0 8px rgba(100, 130, 255, 0.3);
+}
+
+.teaching-whisper {
+  background-color: #fff9db;
+  color: #5a4400;
+  border: 1px solid #e6d28c;
+  box-shadow: 0 0 10px rgba(255, 213, 90, 0.4);
+}
+
+.whisper-box {
+  padding: 12px 16px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 1.125rem;
+  position: relative;
+  animation: fadeIn 0.6s ease;
+}
+
+.mirror-whisper {
+  background-color: #e0e8ff;
+  color: #2c3e50;
+  border: 1px solid #b4c5e4;
+  box-shadow: 0 0 8px rgba(100, 130, 255, 0.3);
+}
+
+.teaching-whisper {
+  background-color: #fff9db;
+  color: #5a4400;
+  border: 1px solid #e6d28c;
+  box-shadow: 0 0 12px rgba(255, 213, 90, 0.4);
+  animation: rippleGlow 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rippleGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 213, 90, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 18px rgba(255, 213, 90, 0.7);
+  }
+}
+
+.ripple-flash {
+  animation: rippleFlash 1.6s ease-in-out;
+  box-shadow: 0 0 15px rgba(128, 255, 200, 0.6);
+  border-color: #90ffc8;
+}
+
+@keyframes rippleFlash {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(128, 255, 200, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(128, 255, 200, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(128, 255, 200, 0.4);
+  }
+}

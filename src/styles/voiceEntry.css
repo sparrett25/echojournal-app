@@ -1,0 +1,44 @@
+
+.voice-entry-card {
+  background-color: #f1e9fb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.25rem;
+  transition: background 0.3s;
+}
+
+.voice-entry-card:hover {
+  background-color: #c9b7ee;
+  
+}
+
+.entry-transcript {
+  font-size: 1.1rem;
+  color: #512d79;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #512d79;
+}
+
+
+.voice-entry {
+  background-color: #e8ddf9;
+  color: #4a2e6e;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.voice-entry:hover {
+  background-color: #b48de8;
+  color: #f8f4ff;
+}

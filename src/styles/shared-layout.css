@@ -1,0 +1,15 @@
+/* src/styles/shared-layout.css */
+
+.sorya-page-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .sorya-page-container {
+    padding: 1.5rem 1rem;
+  }
+}

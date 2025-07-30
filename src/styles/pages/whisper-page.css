@@ -1,0 +1,66 @@
+.whisper-container {
+  background-color: #f3fdf8; /* seafoam/light */
+  color: #111;
+  padding: 1rem;
+  min-height: 100vh; /* ensures full scrollable height */
+}
+.whisper-page {
+  background-color: #f3fdf8;
+  color: #111;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+
+.transcription-panel {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.select-mode select {
+  background-color: #fff;
+  color: #111;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+
+.dim {
+  background: #fff !important;
+  color: #111 !important;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+input[type="text"], textarea {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 6px;
+  color: #111;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  color: #111;
+  font-weight: 600;
+}
+
+.transcription-panel {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.select-mode select,
+input[type="text"], textarea {
+  background-color: #fff;
+  color: #111;
+}
+
+

@@ -1,0 +1,70 @@
+
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: var(--accent-color);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+  background-color: #b48de8; /* soft lavender default */
+  border: none;
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item span {
+  margin-top: 0.25rem;
+}
+
+.nav-item:hover {
+  background-color: #cba2ef;
+  color: white;
+}
+
+.nav-item.active {
+  background-color: #f2d18e; /* soft gold */
+  color: #4e2d73;
+  font-weight: 600;
+}
+
+.nav-item.active span {
+  color: #4e2d73;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 0.75rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+  background-color: #f2d18e; /* Journal Ledger active */
+  color: #4e2d73;
+}
+
+.tab-button.inactive {
+  background-color: #b48de8; /* Journal inactive */
+  color: white;
+}

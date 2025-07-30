@@ -1,0 +1,202 @@
+/* /src/styles/components/sky-map.css */
+
+.sky-map {
+  position: relative;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0a0a1a 0%, #000 100%);
+  overflow: hidden;
+  color: #fff;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.sky-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+  position: relative;
+  font-weight: 600;
+}
+
+.tag-filter-panel {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.tag-filter {
+  background: #222;
+  color: #ccc;
+  border: 1px solid #444;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.tag-filter.active {
+  background: #6cc6ff;
+  color: #000;
+  border-color: #6cc6ff;
+}
+
+.sky-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.star-node {
+  position: absolute;
+  font-size: 1.75rem;
+  color: #78ccff;
+  animation: pulseStar 2s infinite ease-in-out;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 12px #78ccff;
+  filter: drop-shadow(0 0 6px #78ccff);
+}
+
+.selected-star {
+  color: #ffd36e;
+  animation: orbitSelected 1.5s infinite ease-in-out;
+  text-shadow: 0 0 14px #ffd36e;
+  filter: drop-shadow(0 0 6px #ffd36e);
+}
+
+@keyframes pulseStar {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+
+@keyframes orbitSelected {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Ambient color glow per tag class */
+.presence {
+  color: #87CEFA;
+  text-shadow: 0 0 16px #87CEFA;
+  filter: drop-shadow(0 0 6px #87CEFA);
+}
+.clarity {
+  color: #a2f5ff;
+  text-shadow: 0 0 16px #a2f5ff;
+  filter: drop-shadow(0 0 6px #a2f5ff);
+}
+.truth {
+  color: #ffd700;
+  text-shadow: 0 0 20px #ffd700;
+  filter: drop-shadow(0 0 6px #ffd700);
+}
+.awareness {
+  color: #ff9efc;
+  text-shadow: 0 0 18px #ff9efc;
+  filter: drop-shadow(0 0 6px #ff9efc);
+}
+.peace {
+  color: #a1ffb3;
+  text-shadow: 0 0 16px #a1ffb3;
+  filter: drop-shadow(0 0 6px #a1ffb3);
+}
+.untagged {
+  color: #aaa;
+  text-shadow: 0 0 6px #444;
+  filter: none;
+}
+
+.star-trail .animated {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: dashFadeIn 3s ease-out forwards;
+}
+
+@keyframes dashFadeIn {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.5;
+  }
+}
+
+.star-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.star-modal {
+  background: #1c1c2a;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-date {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.modal-tags {
+  margin-top: 1rem;
+}
+
+.modal-tag {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  margin: 0.2rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.close-button {
+  margin-top: 1.5rem;
+  background: #444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-button:hover {
+  background: #666;
+}
+
+@media (max-width: 600px) {
+  .sky-title {
+    font-size: 1.5rem;
+  }
+  .star-node {
+    font-size: 1.3rem;
+  }
+}

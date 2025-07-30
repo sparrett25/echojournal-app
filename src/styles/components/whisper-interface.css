@@ -1,0 +1,195 @@
+/* whisper-interface.css */
+
+.whisper-interface {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.0rem;
+  color: #e0e0f0;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.starfield-bg {
+  background: radial-gradient(ellipse at center, #0b0c22 0%, #040414 100%);
+  background-image: url('/stars-overlay.gif'); /* Use canvas or animated gif/svg */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sorya-visual-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sorya-avatar {
+  width: 200px;
+  height: auto;
+  border-radius: 100px;
+  box-shadow: 0 0 30px rgba(173, 216, 230, 0.4);
+}
+
+.sorya-status-text {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #9bd8f5;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+.response-mode-selector select {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #12142a;
+  color: #e0e0f0;
+  border: 1px solid #3b3f59;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.record-button-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.record-button-container button {
+  background: radial-gradient(circle, #346df1 0%, #1a2d66 100%);
+  border: none;
+  border-radius: 100%;
+  padding: 1.25rem;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(52, 109, 241, 0.6);
+  transition: transform 0.2s ease-in-out;
+}
+
+.record-button-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(90, 144, 255, 0.8);
+}
+
+
+.voice-toggle-button:hover {
+  transform: scale(1.1);
+}
+
+.voice-toggle-overlay {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 1rem;
+  z-index: 10;
+  background: rgba(0,0,0,0.4);
+  padding: 0.3rem;
+  border-radius: 999px;
+}
+
+.sorya-avatar.recording-pulse {
+  animation: pulse-record 1.2s infinite;
+  box-shadow: 0 0 15px 4px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes pulse-record {
+  0% { box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.4); }
+  50% { box-shadow: 0 0 15px 6px rgba(255, 0, 0, 0.8); }
+  100% { box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.4); }
+}
+
+.voice-toggle-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #33ffaa, #006666);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 255, 200, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.voice-toggle-button.active {
+  box-shadow: 0 0 14px 4px rgba(0, 255, 200, 0.9);
+  background: radial-gradient(circle, #66ffd9, #008877);
+}
+
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+
+.voice-toggle-button,
+.record-toggle-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #33ffaa, #006666);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0, 255, 200, 0.4);
+  transition: box-shadow 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.voice-toggle-button.active,
+.record-toggle-button.active {
+  box-shadow: 0 0 10px 3px rgba(0, 255, 200, 0.9);
+}
+
+.record-toggle-button.active {
+  background: radial-gradient(circle, #ff4444, #770000);
+  box-shadow: 0 0 10px 3px rgba(255, 0, 0, 0.9);
+}
+
+@media (max-width: 600px) {
+  .voice-toggle-button,
+  .record-toggle-button {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+}
+
+.response-mode-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.voice-toggle-inline {
+  display: flex;
+  align-items: center;
+}
+
+.sorya-glyph {
+  width: 80px;
+  opacity: 0.4;
+  animation: pulseGlyph 2.8s ease-in-out infinite;
+}
+
+@keyframes pulseGlyph {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.1); opacity: 0.6; }
+}
+
+.fade-in {
+  animation: fadeInSorya 1.8s ease forwards;
+}
+
+@keyframes fadeInSorya {
+  0% { opacity: 0; transform: scale(0.96); }
+  100% { opacity: 1; transform: scale(1); }
+}

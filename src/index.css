@@ -1,0 +1,204 @@
+/* index.css - Celestial Drift Theme */
+
+:root {
+  --bg-color: #f4f0fa; /* lavender mist */
+  --text-color: #2e2e2e;
+  --muted-text: #666666;
+
+  --accent-color: #7b61ff;       /* soft iris */
+  --accent-color-hover: #a68eff; /* misty violet */
+
+  --card-bg: #ffffff;
+  --card-border: #e2d8f6;
+
+  --button-radius: 12px;
+  --shadow-soft: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Elements */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: var(--accent-color);
+  color: var(--text-color);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--button-hover);
+  box-shadow: 0 0 6px rgba(122, 168, 216, 0.4);
+}
+
+input, textarea {
+  font-family: inherit;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+}
+
+.tone-tag {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(122, 168, 216, 0.1);
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 0.85rem;
+  box-shadow: 0 0 6px rgba(122, 168, 216, 0.3);
+  display: inline-block;
+  backdrop-filter: blur(3px);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .container, .ledger-entry, .whisper-panel {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* === Light Mode Adjustments for Resonance Grid and Glyph Scaling === */
+
+.presence-base {
+  max-height: 120px !important;
+}
+
+.presence-container {
+  height: 150px !important;
+}
+
+.resonance-grid-block,
+.memory-tone-echo {
+  background-color: #f0f4fa !important;
+  color: #222 !important;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.memory-tone-echo .harmonize-button {
+  background-color: #dceeff !important;
+  color: #111 !important;
+}
+
+.memory-tone-echo p,
+.memory-tone-echo span {
+  color: #222 !important;
+}
+
+
+
+/* === Darker Recent Tone Text for Whisper Page === */
+.recent-reflections-log,
+.recent-reflections-log p,
+.recent-reflections-log span,
+.recent-reflections-log li {
+  color: #1a237e !important; /* Indigo dark blue */
+  font-weight: 500;
+}
+
+
+/* 🟣 Primary Button */
+.primary-button {
+  background-color: var(--accent-color);
+  color: #fefbf3;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.primary-button:hover {
+  background-color: var(--accent-color-hover);
+  color: #fffde0;
+}
+
+.primary-button:active {
+  transform: scale(0.98);
+}
+
+/* 🟡 Secondary Button */
+.secondary-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--accent-color);
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* 🔘 Tag Button */
+.tag-button {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background-color: #f3edff;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag-button.selected {
+  background-color: var(--accent-color);
+  color: white;
+}
